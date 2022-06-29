@@ -1,0 +1,173 @@
+/*--------------------------Responsive---------------------------*/
+
+@media screen and (min-width:578px) and (max-width:700px){
+
+    .navbar ul li:hover::before{
+        display: none;
+    }
+    
+    .cont-home{
+        margin-top:100px;
+    } 
+    
+    .cont-home h1{
+        font-size: 80px;
+    }
+    
+    .cont-home button{
+        width: 350px;
+    }
+
+
+        /*-----TURNOS-----*/
+
+    .container-card{
+        display: none;
+    }
+
+
+    #carouselExampleCaptions{
+        display: block;
+        margin-top: 150px;
+        margin-left: 50px;
+        margin-right: 50px;
+        margin-bottom: 100px;
+    }
+
+    
+}
+
+
+
+
+
+
+
+ /*------CELULARES GRANDES / MINI TABLETS------*/
+
+@media screen and (min-width:426px) and (max-width:577px){
+    
+
+    .navbar ul li::before{
+        display: none;
+    }
+
+    .navbar ul li:hover::before{
+        display: none;
+    }
+
+    .cont-home{
+        margin-top: 100px;
+        text-align: center;
+    }
+    
+    .cont-home h1{
+        font-size: 60px;
+    }
+
+    .cont-home button{
+        width: 350px;
+        height: 80px;
+        text-align: center;
+    }
+
+     /*------TURNOS-----*/
+
+
+    .container-card{
+        display: none;
+    }
+
+
+    #carouselExampleCaptions{
+        display: block;
+        margin-top: 150px;
+        margin-left: 50px;
+        margin-right: 50px;
+    }
+
+    /*-------CONTACTO------*/
+
+    .formulario{
+        width: 90%;
+    }
+
+
+    /*------REGISTRO------*/
+
+    .cont{
+        width: 90%;
+    }
+}
+
+
+
+
+
+
+/*-------CELULARES-------*/
+
+@media screen and (min-width:320px) and (max-width:425px){
+    
+
+    .navbar ul li::before{
+        display: none;
+    }
+
+    .navbar ul li:hover::before{
+        display: none;
+    }
+    
+    .cont-home{
+        margin-top: 100px;
+        text-align: center;
+    }
+
+    .cont-home h1{
+        font-size: 40px;
+        text-align: center;
+    }
+
+
+
+    /*------TURNOS-----*/
+
+
+    .container-card{
+        display: none;
+    }
+
+
+    #carouselExampleCaptions{
+        display: block;
+        margin-top: 70px;
+        margin-left: 50px;
+        margin-right: 50px;
+    }
+
+    /*------NOSOTROS------*/
+
+    iframe{
+        display: none;
+    }
+
+    .map-cont{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+    .iframe-small{
+        display: inline-block;
+    }
+
+
+    /*--------CONTACTO--------*/
+    .formulario{
+        width: 90%;
+    }
+
+    /*-----REGISTRO----*/
+    .cont{
+        width: 90%;
+    }
+}

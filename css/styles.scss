@@ -1,4 +1,4 @@
-//@import url(./tools/_responsive.scss);
+@import url(./tools/_responsive.scss);
 //@import url(./tools/_vars.scss);
 //@import url(./tools/_mixin.scss);
 
@@ -12,9 +12,9 @@ $headings:(
     h1:4em,
     h2:3em,
     h3:2em,
-    h4:1em,
-    h5:0.75em,
-    h6:0.35em
+    h4:1.5em,
+    h5:1em,
+    h6:0.50em
 );
 
 $colorFondos :rgba(0, 0, 0, 0.4);
@@ -22,8 +22,7 @@ $colorFondos :rgba(0, 0, 0, 0.4);
 
 
 
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,200;0,500;1,300&family=Poppins:ital,wght@1,200&family=Roboto:wght@300&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200;400;500;600&family=Poppins:ital,wght@1,200&family=Roboto:wght@300&display=swap');
 
 *{
     font-family: 'Roboto', sans-serif;
@@ -43,6 +42,7 @@ body{
     padding-bottom: 14em ;
     min-height: 100vh;
     max-width: 100%;
+    overflow-x: hidden;
 }
 
 
@@ -57,7 +57,7 @@ body{
     a {
         text-decoration: none;
         color: rgb(106, 102, 102);
-        font-size: map-get($headings, h4 );
+        font-size: map-get($headings, h5 );
         font-weight: 500;
     }
     a:hover{
@@ -146,7 +146,7 @@ footer{
       max-width: 100%;
 
       h3{
-        font-size: map-get($headings, h4 );
+        font-size: map-get($headings, h5 );
         font-weight: 500;
         text-transform: capitalize;
         line-height: 3rem;
@@ -172,7 +172,7 @@ footer{
     color: rgb(187, 184, 184);
 }
 .redes a i {
-    font-size: map-get($headings, h4 );
+    font-size: map-get($headings, h5 );
     transition: color .4s ease;
     
 }
@@ -188,7 +188,7 @@ footer{
     padding: 20px 0;
     text-align: center;
     .copy{
-        font-size:map-get($headings ,h4 );
+        font-size:map-get($headings ,h5 );
         word-spacing: 2px;
         text-transform: capitalize;
         color: gray;
@@ -204,7 +204,9 @@ footer{
 
 /*-----TRUNOS-----*/
 
-#carouselExampleCaptions{
+
+#carouselExampleCaptions ,
+#carouselExampleControls{
     display: none;
 }
 
@@ -214,7 +216,6 @@ footer{
     margin-top: 100px;
 
     .turnos-title{
-        margin-top: 30px;
         color: rgb(154, 154, 154);
         font-weight: 600;
         font-size: map-get($headings, h3);
@@ -234,19 +235,19 @@ footer{
     flex-wrap:wrap ;
     justify-content: space-evenly;
     margin: auto;
-    margin-bottom: 80px;
+    margin-top: 50px;
 }
 
 .container-card .card{
     margin-top: 30px;
-    width: 330px;
-    height: 400px;
+    width: 280px;
+    height: 350px;
     border-radius: 3px;
+    background: $colorFondos;
     box-shadow:  $colorFondos;
     overflow:hidden ;
     text-align: center;
     transition: all 0.25s;
-    background: $colorFondos;
 }
 
 .container-card .card:hover{
@@ -257,13 +258,12 @@ footer{
 
 .container-card .card .nombre{
     font-weight: 500;
-    font-size: map-get($headings, h3 );
+    font-size: map-get($headings, h4 );
     color: rgb(255, 255, 255);
 }
 
 .container-card .card{
-    padding: 0 1rem;
-   // font-size: 20px;
+    padding: 1rem 1rem;
     font-weight: 300;
 }
 
@@ -274,6 +274,74 @@ footer{
 .nombre{
     color: white;
 }
+
+
+.enlace-serv{
+    text-decoration: none;
+}
+
+    //  TURNOS___SERVICIOS //
+
+#servicio-title{
+    display: flex;
+    justify-content: center;
+    margin: auto;
+    width: 100%;
+    color: #fff;
+
+    h2{
+        font-size: map-get($headings, h3);
+        font-weight: 500;
+        padding-top: 120px;
+
+        i{
+            color: rgb(255, 255, 255);
+            font-size: map-get($headings, h5 );
+        }
+    }
+}
+
+#servicio-cont{
+    display: flex;
+    justify-content: space-evenly;
+    margin: auto;
+    margin-top: 70px;
+    flex-direction: row;
+    width: 100%;
+    padding-bottom: 120px;
+}
+ 
+
+#servicio-cont .card-serv{
+    transition: all .25s;
+    border-radius: 3px;
+    width: 280px;
+    height: 350px;
+    border-radius: 3px;
+    background: $colorFondos;
+    box-shadow:  $colorFondos;
+}
+
+
+.card-serv-body {
+    text-align: center;
+    padding: 9px;
+}
+
+
+#servicio-cont .card-serv:hover{
+    transform: translateY(-15px);
+    box-shadow:  $colorFondos;
+}
+
+
+
+
+
+
+
+
+
 
 /*------NOSOTROS-------*/
 
@@ -434,11 +502,9 @@ textarea{
 
 
 
-//            -- RESPONSIVE --
+/*--------------------------Responsive---------------------------*/
 
-
-
-@media screen and (min-width:578px) and (max-width:700px){
+@media screen and (min-width:578px) and (max-width:820px){
 
     .navbar ul li:hover::before{
         display: none;
@@ -463,15 +529,56 @@ textarea{
         display: none;
     }
 
-
-    #carouselExampleCaptions{
-        display: block;
-        margin-top: 150px;
-        margin-left: 50px;
-        margin-right: 50px;
-        margin-bottom: 100px;
+    #servicio-cont{
+        display: none;
     }
 
+// // carousel barbero
+    #carouselExampleCaptions{
+        display: flex;
+        margin:100px 100px 100px 100px;
+    }
+   
+    
+    .carousel-item {
+        text-decoration: none;
+        text-align: center;
+        background-color:rgba(0, 0, 0, 0.7);
+        border-radius: 5px;
+    }
+    .carousel-item .card-name{
+        color: rgb(255, 255, 255);
+        text-decoration: none;
+        font-size: map-get($headings, h2 );
+        font-weight: 500;
+    }
+   
+  //  Servicios 
+  
+    #servicio-title{
+        font-size: map-get($headings, h4 );
+    }  
+
+    #carouselExampleControls{
+        display: block;
+        margin: 70px 100px 80px 100px;
+        background-color: rgba(0, 0, 0, 0.4);
+    }
+    
+    .carousel-item{
+        text-align: center;
+    }
+
+    .carousel-item h5{
+        color: white;
+        font-size: map-get($headings, h2 );
+    }
+    .card-txt-resp{
+        color: rgb(156, 155, 155);
+        font-size: map-get($headings, h3 );
+    }
+   
+   
     
 }
 
@@ -512,13 +619,48 @@ textarea{
     .container-card{
         display: none;
     }
-
+    #servicio-cont{
+        display: none;
+    }
 
     #carouselExampleCaptions{
+        display: flex;
+        margin:70px 50px 60px 50px;
+    }
+
+    .carousel-item {
+        text-decoration: none;
+        text-align: center;
+        background-color:rgba(0, 0, 0, 0.7);
+        border-radius: 5px;
+    }
+    .carousel-item .card-name{
+        color: rgb(255, 255, 255);
+        text-decoration: none;
+        font-size: map-get($headings, h3 );
+        font-weight: 500;
+    }
+
+
+    // Servicios
+
+    #carouselExampleControls{
         display: block;
-        margin-top: 150px;
-        margin-left: 50px;
-        margin-right: 50px;
+        margin: 35px 50px 50px 50px;
+        background-color: rgba(0, 0, 0, 0.4);
+    }
+    
+    .carousel-item{
+        text-align: center;
+    }
+
+    .carousel-item h5{
+        color: white;
+        font-size: map-get($headings, h3 );
+    }
+    .card-txt-resp{
+        color: rgb(156, 155, 155);
+        font-size: map-get($headings, h4 );
     }
 
     /*-------CONTACTO------*/
@@ -569,6 +711,9 @@ textarea{
         display: none;
     }
 
+    #servicio-cont{
+        display: none;
+    }
 
     #carouselExampleCaptions{
         display: block;
@@ -576,6 +721,42 @@ textarea{
         margin-left: 50px;
         margin-right: 50px;
     }
+
+    .carousel-item {
+        text-decoration: none;
+        text-align: center;
+        background-color:rgba(0, 0, 0, 0.7);
+        border-radius: 5px;
+    }
+    .carousel-item .card-name{
+        color: rgb(255, 255, 255);
+        text-decoration: none;
+        font-size: map-get($headings, h3 );
+        font-weight: 500;
+    }
+
+     // Servicios
+
+     #carouselExampleControls{
+        display: block;
+        margin: 35px 50px 50px 50px;
+        background-color: rgba(0, 0, 0, 0.4);
+    }
+    
+    .carousel-item{
+        text-align: center;
+    }
+
+    .carousel-item h5{
+        color: white;
+        font-size: map-get($headings, h3 );
+    }
+    .card-txt-resp{
+        color: rgb(156, 155, 155);
+        font-size: map-get($headings, h4 );
+    }
+
+
 
     /*------NOSOTROS------*/
 

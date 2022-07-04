@@ -25,20 +25,58 @@
         display: none;
     }
 
-
-    #carouselExampleCaptions{
-        display: block;
-        margin-top: 150px;
-        margin-left: 50px;
-        margin-right: 50px;
-        margin-bottom: 100px;
+    #servicio-cont{
+        display: none;
     }
 
+// // carousel barbero
+    #carouselExampleCaptions{
+        display: flex;
+        margin:100px 100px 100px 100px;
+    }
+   
+    
+    .carousel-item {
+        text-decoration: none;
+        text-align: center;
+        background-color:rgba(0, 0, 0, 0.7);
+        border-radius: 5px;
+    }
+    .carousel-item .card-name{
+        color: rgb(255, 255, 255);
+        text-decoration: none;
+        font-size: map-get($headings, h2 );
+        font-weight: 500;
+    }
+   
+  //  Servicios 
+  
+    #servicio-title{
+        font-size: map-get($headings, h4 );
+    }  
+
+    #carouselExampleControls{
+        display: block;
+        margin: 70px 100px 80px 100px;
+        background-color: rgba(0, 0, 0, 0.4);
+    }
+    
+    .carousel-item{
+        text-align: center;
+    }
+
+    .carousel-item h5{
+        color: white;
+        font-size: map-get($headings, h2 );
+    }
+    .card-txt-resp{
+        color: rgb(156, 155, 155);
+        font-size: map-get($headings, h3 );
+    }
+   
+   
     
 }
-
-
-
 
 
 
@@ -77,13 +115,48 @@
     .container-card{
         display: none;
     }
-
+    #servicio-cont{
+        display: none;
+    }
 
     #carouselExampleCaptions{
+        display: flex;
+        margin:70px 50px 60px 50px;
+    }
+
+    .carousel-item {
+        text-decoration: none;
+        text-align: center;
+        background-color:rgba(0, 0, 0, 0.7);
+        border-radius: 5px;
+    }
+    .carousel-item .card-name{
+        color: rgb(255, 255, 255);
+        text-decoration: none;
+        font-size: map-get($headings, h2 );
+        font-weight: 500;
+    }
+
+
+    // Servicios
+
+    #carouselExampleControls{
         display: block;
-        margin-top: 150px;
-        margin-left: 50px;
-        margin-right: 50px;
+        margin: 35px 50px 50px 50px;
+        background-color: rgba(0, 0, 0, 0.4);
+    }
+    
+    .carousel-item{
+        text-align: center;
+    }
+
+    .carousel-item h5{
+        color: white;
+        font-size: map-get($headings, h3 );
+    }
+    .card-txt-resp{
+        color: rgb(156, 155, 155);
+        font-size: map-get($headings, h4 );
     }
 
     /*-------CONTACTO------*/
@@ -99,9 +172,6 @@
         width: 90%;
     }
 }
-
-
-
 
 
 
@@ -137,6 +207,9 @@
         display: none;
     }
 
+    #servicio-cont{
+        display: none;
+    }
 
     #carouselExampleCaptions{
         display: block;
@@ -144,6 +217,42 @@
         margin-left: 50px;
         margin-right: 50px;
     }
+
+    .carousel-item {
+        text-decoration: none;
+        text-align: center;
+        background-color:rgba(0, 0, 0, 0.7);
+        border-radius: 5px;
+    }
+    .carousel-item .card-name{
+        color: rgb(255, 255, 255);
+        text-decoration: none;
+        font-size: map-get($headings, h3 );
+        font-weight: 500;
+    }
+
+     // Servicios
+
+     #carouselExampleControls{
+        display: block;
+        margin: 35px 50px 50px 50px;
+        background-color: rgba(0, 0, 0, 0.4);
+    }
+    
+    .carousel-item{
+        text-align: center;
+    }
+
+    .carousel-item h5{
+        color: white;
+        font-size: map-get($headings, h3 );
+    }
+    .card-txt-resp{
+        color: rgb(156, 155, 155);
+        font-size: map-get($headings, h4 );
+    }
+
+
 
     /*------NOSOTROS------*/
 

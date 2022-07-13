@@ -87,10 +87,11 @@ body{
 
 .cont-home{
     @include conts;
-    margin-top: 100px;
+    margin-top: 60px;
 
     h1{
         padding: 70px;
+        margin-top: 100px;
         text-align: center;
         color: rgb(255, 255, 255);
         font-size: 100px;
@@ -104,7 +105,7 @@ body{
     display: flex;
     justify-content: center;
     position: relative;
-    margin-bottom: 25px;
+    margin-top: 25px;
     text-transform: uppercase;
 
     button {
@@ -114,7 +115,7 @@ body{
     padding: 20px 80px;
     font-size: 17px;
     text-transform: uppercase;
-    font-weight: 500;
+    font-weight: map-get($headings , h4 );
 
     &:hover{
         cursor: pointer;
@@ -125,14 +126,120 @@ body{
   }
 
 }
+
+
+// --------HomeServ---------------//
+
+
+#homeServCont{
+    margin-top: 200px;
+    background-color: #ffffff;
+    width: 100%;
+    height: 120vh;
+    padding-bottom: 100px;
+}
+
+.titleServHome{
+    text-align: center;
+    padding-top: 50px;
+    h1{
+        font-size: map-get($headings , h1 );
+        font-weight: 600;
+    }
+}
+.items{
+    display: flex;
+    justify-content: space-evenly;
+    // padding-top: 70px;
+}
+
+.item1, .item2,
+.item3, .item4{
+    max-width: 230px;
+    text-align: center;
+}
+
+.titleServ{
+    padding-top: 25px;
+    font-size: map-get($headings , h4 );
+}
+.textServ{
+    font-weight: 400;
+    color: rgb(145, 137, 137);
+    padding-top: 15px;
+}
+
+
+@-webkit-keyframes scroll {
+    0% {
+      -webkit-transform: translateX(0);
+              transform: translateX(0);
+    }
+    100% {
+      -webkit-transform: translateX(calc(-250px * 7));
+              transform: translateX(calc(-250px * 7));
+    }
+}
+  
+  @keyframes scroll {
+    0% {
+      -webkit-transform: translateX(0);
+              transform: translateX(0);
+    }
+    100% {
+      -webkit-transform: translateX(calc(-250px * 7));
+              transform: translateX(calc(-250px * 7));
+    }
+}
+  .slider {
+    background: white;
+    /*box-shadow: 0 10px 20px -5px rgba(0, 0, 0, .125);*/
+    height: 280px;
+    margin: auto;
+    overflow: hidden;
+    position: relative;
+    width: 95%;
+    margin-top: 60px;
+    padding-bottom: 100px;
+}
+  .slider::before, .slider::after {
+    // background: linear-gradient(to right, white 0%, rgba(255, 255, 255,0) 100%);
+    content:"";
+    height: 280px;
+    position: absolute;
+    width: 220px;
+    z-index: 2 ;
+}
+  .slider::after {
+    right: 0;
+    top: 0;
+    -webkit-transform: rotateZ(180deg);
+            transform: rotateZ(180deg);
+  }
+  .slider::before {
+    left: 0;
+    top: 0;
+  }
+  .slider .slide-track {
+    -webkit-animation: scroll 40s linear infinite;
+            animation: scroll 40s linear infinite;
+    display: flex;
+    width: calc(250px * 14);
+  }
+  .slider .slide {
+    height: 50px;
+    width: 250px;
+  }
+
+
 /*-----------FOOTER----------*/
 
 
 footer{
     background: #111;
-    height: 200px;
+    height: 225px;
     max-width: 100%;
-    padding-top: 40px;
+    padding-top: 20px;
     color: #fff;
     text-align: center;
     position: absolute;
@@ -146,13 +253,15 @@ footer{
       max-width: 100%;
 
       h3{
-        font-size: map-get($headings, h5 );
+        font-size: map-get($headings, h4 );
         font-weight: 500;
         text-transform: capitalize;
         line-height: 3rem;
       }
     }
 }
+
+
 
 .redes{
     list-style:none;
@@ -523,6 +632,22 @@ textarea{
     }
 
 
+
+
+    #homeServCont{
+        height: 315vh;
+    }
+    #homeServCont .items{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .item1 , .item2 ,
+    .item3 , .item4 {
+        margin:auto;
+        padding-top:50px;
+    }
+
         /*-----TURNOS-----*/
 
     .container-card{
@@ -612,6 +737,24 @@ textarea{
         height: 80px;
         text-align: center;
     }
+
+
+    #homeServCont{
+        height: 160vh;
+    }
+
+    #homeServCont .items{
+        display: flex;
+        flex-direction: column;
+    }
+
+
+    .item1 , .item2 ,
+    .item3 , .item4 {
+        margin:auto;
+        padding-top:50px;
+    }
+
 
      /*------TURNOS-----*/
 
@@ -734,6 +877,24 @@ textarea{
         font-size: map-get($headings, h3 );
         font-weight: 500;
     }
+
+    #homeServCont{
+        height: 160vh;
+    }
+
+    #homeServCont .items{
+        display: flex;
+        flex-direction: column;
+    }
+
+
+    .item1 , .item2 ,
+    .item3 , .item4 {
+        margin:auto;
+        padding-top:35px;
+    }
+
+
 
      // Servicios
 

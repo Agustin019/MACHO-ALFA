@@ -962,7 +962,7 @@ textarea {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
-    min-height: 180vh;
+    min-height: 200vh;
   }
   iframe {
     width: 320px;

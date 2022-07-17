@@ -13,7 +13,7 @@
   <title>Macho Alfa - Barberia | Pedi tu turno online facíl y rapido!</title>
 </head>
 
-<body id="body-turnos">
+<body>
   <header>
     <div class="cont-nav">
       <nav class="navbar navbar-expand-lg bg-white fixed-top">
@@ -52,64 +52,71 @@
     </div>
   </header>
 
-  <div class="turnos-cont">
+  <div class="turnos-cont"> 
     <h3 class="turnos-title">Nuevo turno</h3>
     <h2 class="who-txt">¿Con quién?</h2>
 
     <div class="container-card">
-      <a href="#servicio-title" class="enlace-serv">
-      <div class="card b">
-        <img src="../assets/bruno.jpg" alt="Turnos Barberia - Barbero - Turnos barberia online - Barberia online" class="img-bruno">
-        <h4 class="nombre">Bruno</h4>
-      </div>
-    </a>
-
-     <a  href="#servicio-title" class="enlace-serv">
-        <div class="card l">
-          <img src="../assets/lautaro.jpg" alt="Turnos Barberia - Barbero - Turnos barberia online - Barberia online" class="img-lautaro">
-          <h4 class="nombre">Lautaro</h4>
+      <div class="card-serv text-bg-dark mb-3" style="width: 16rem;">
+        <a href="#servicio-title" class="enlace-serv">
+            <img src="../assets/ricci.jpg" class="card-img-top" alt="...">
+          </a>
+            <div class="card-serv-body">
+              <h5 class="card-title">Bruno</h5>
+            </div>
         </div>
-     </a>
+
+        <div class="card-serv text-bg-dark mb-3" style="width: 16rem;">
+          <a href="#servicio-title" class="enlace-serv">
+              <img src="../assets/lauti.jpg" class="card-img-top" alt="...">
+            </a>
+              <div class="card-serv-body">
+                <h5 class="card-title">Lautaro</h5>
+              </div>
+          </div>
     </div>
-  </div>
 
+      <!-- carousel barberos-->
 
-  <!-- carousel barberos-->
-
-  <div id="carouselExampleCaptions" class="carousel carousel-dark slide" data-bs-ride="carousel">
-    <div class="carousel-inner">
-      <div class="carousel-item active" data-bs-interval="10000">
-        <a href="#servicio-title">
-          <img src="../assets/bruno.png" class="d-block w-100" alt="...">
-        </a>
-        <h5 class="card-name">Bruno</h5>
+    <div id="carouselExampleCaptions" class="carousel carousel-dark slide" data-bs-ride="carousel">
+      <div class="carousel-inner">
+        <div class="carousel-item active" data-bs-interval="10000">
+          <a href="#servicio-title">
+            <img src="../assets/ricci.jpg" class="d-block w-100" alt="...">
+          </a>
+          <h5 class="card-name">Bruno</h5>
+        </div>
+        <div class="carousel-item" data-bs-interval="2000">
+          <a href="#servicio-title">
+            <img src="../assets/lauti.jpg" class="d-block w-100" alt="...">
+          </a>
+          <h5 class="card-name">Lautaro</h5>
+        </div>
+  
       </div>
-      <div class="carousel-item" data-bs-interval="2000">
-        <a href="#servicio-title">
-          <img src="../assets/lautaro.png" class="d-block w-100" alt="...">
-        </a>
-        <h5 class="card-name">Lautaro</h5>
-      </div>
-
+      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+         <span class="visually-hidden">Previous</span> 
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+         <span class="visually-hidden">Next</span> 
+      </button> 
     </div>
-    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
-      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-       <span class="visually-hidden">Previous</span> 
-    </button>
-    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
-      <span class="carousel-control-next-icon" aria-hidden="true"></span>
-       <span class="visually-hidden">Next</span> 
-    </button> 
-  </div>
+</div>
+
+
+
+ 
 
 
     <!-- SERVICIOS -->
 
 
-    <div id="servicio-title">
+    <div class="servicio-title">
       <h2 ><i class="fa fa-scissors"></i> Selecciona el servicio</h2>
-  </div>
-  <div id="servicio-cont">
+    </div>
+    <div id="servicio-cont">
           <div class="card-serv text-bg-dark mb-3" style="width: 14rem;">
              <a href="#carouselExampleDark">
                   <img src="../assets/corte.jpg" class="card-img-top" alt="...">
@@ -129,11 +136,20 @@
                     <p class="card-text"><i class="fa fa-clock-o"></i> 60 min.</p>
                   </div>
            </div>
+
+
+
+
+
   </div>
 
  <!-- carousel servicios-->
 
-<div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+
+
+
+
+ <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
   <div class="carousel-inner">
     <div class="carousel-item active">
       <img src="/assets/corte.jpg" class="d-block w-100" alt="...">
@@ -156,6 +172,9 @@
   </button>
 </div>
 
+
+
+
   <footer>
     <div class="footer-cont container-fluid">
       <h3>MACHOALFA</h3>
@@ -169,6 +188,18 @@
       <p class="copy">&copy;2022 Macho Alfa / Todos los derechos reservados. Powered by<span> NA Technology</span></p>
     </div>
   </footer>
+
+
+
+
+
+
+
+
+
+
+
+
   <script src="https://kit.fontawesome.com/9f863b172d.js" crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous">

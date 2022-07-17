@@ -32,12 +32,6 @@ $colorFondos :rgba(0, 0, 0, 0.4);
 }
 
 body{
-    background-image: url(../assets/fondo3.avif);
-    background-size:100vh;
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-    margin: 0;
     position: relative;
     padding-bottom: 14em ;
     min-height: 100vh;
@@ -47,7 +41,9 @@ body{
 
 
 /*-----NAVBAR-----*/
-
+.cont-nav{
+    box-shadow: 3px gray;
+}
 .navbar ul li {
     list-style: none;
     display: inline-block;
@@ -88,6 +84,13 @@ body{
 .cont-home{
     @include conts;
     margin-top: 60px;
+    width: 100%;
+    height: 100vh;
+    background-image: url(../assets/fondo3.avif) ;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size:cover;
+    overflow-x: hidden;
 
     h1{
         padding: 70px;
@@ -105,7 +108,7 @@ body{
     display: flex;
     justify-content: center;
     position: relative;
-    margin-top: 25px;
+    margin-bottom: 100px;
     text-transform: uppercase;
 
     button {
@@ -113,26 +116,31 @@ body{
     color: white;
     border: 2px solid white;
     padding: 20px 80px;
-    font-size: 17px;
+    font-size:map-get($headings , h4 );
     text-transform: uppercase;
-    font-weight: map-get($headings , h4 );
+    font-weight: 500;
 
     &:hover{
         cursor: pointer;
         background-color: white;
         color: black;
         transition:all ease-out 0.4s;
+        border: 2px solid black;
     }
   }
 
 }
 
-
+.wp-icon{
+    display: flex;
+    justify-content: flex-end;
+    margin-right: 25px;
+    margin-bottom: 15px;
+}
 // --------HomeServ---------------//
 
 
 #homeServCont{
-    margin-top: 200px;
     background-color: #ffffff;
     width: 100%;
     height: 120vh;
@@ -141,16 +149,16 @@ body{
 
 .titleServHome{
     text-align: center;
-    padding-top: 50px;
+    padding-top: 10px;
     h1{
-        font-size: map-get($headings , h1 );
+        font-size: map-get($headings , h2 );
         font-weight: 600;
     }
 }
 .items{
     display: flex;
     justify-content: space-evenly;
-    // padding-top: 70px;
+    padding-top: 40px;
 }
 
 .item1, .item2,
@@ -311,7 +319,7 @@ footer{
     font-weight: 500;
 }
 
-/*-----TRUNOS-----*/
+/*-----TURNOS-----*/
 
 
 #carouselExampleCaptions ,
@@ -321,8 +329,10 @@ footer{
 
 .turnos-cont{
     text-align: center;
-    display: grid;
     margin-top: 100px;
+    width: 100%;
+    height: 100vh;
+    background-color: #f3f3f3;
 
     .turnos-title{
         color: rgb(154, 154, 154);
@@ -331,7 +341,7 @@ footer{
     }
     .who-txt { 
         @extend .turnos-title;    
-        color: rgb(255, 254, 254);
+        color: rgb(0, 0, 0);
     }
 }
 
@@ -339,18 +349,14 @@ footer{
 .container-card{
     width: 100%;
     max-width: 1200px;
-    height: 430px;
     display: flex;
     flex-wrap:wrap ;
     justify-content: space-evenly;
     margin: auto;
-    margin-top: 50px;
 }
 
-.container-card .card{
+.container-card .card-serv{
     margin-top: 30px;
-    width: 280px;
-    height: 350px;
     border-radius: 3px;
     background: $colorFondos;
     box-shadow:  $colorFondos;
@@ -359,31 +365,17 @@ footer{
     transition: all 0.25s;
 }
 
-.container-card .card:hover{
+.container-card .card-serv:hover{
     transform: translateY(-15px);
     box-shadow: 0 12px 16px rgba(0, 0, 0, 0.2);
 }
 
 
-.container-card .card .nombre{
+.container-card .card-serv{
     font-weight: 500;
     font-size: map-get($headings, h4 );
     color: rgb(255, 255, 255);
 }
-
-.container-card .card{
-    padding: 1rem 1rem;
-    font-weight: 300;
-}
-
-.card:hover{
-    cursor: pointer;
-}
-
-.nombre{
-    color: white;
-}
-
 
 .enlace-serv{
     text-decoration: none;
@@ -391,20 +383,20 @@ footer{
 
     //  TURNOS___SERVICIOS //
 
-#servicio-title{
+.servicio-title{
     display: flex;
     justify-content: center;
     margin: auto;
     width: 100%;
-    color: #fff;
+    color: rgb(0, 0, 0);
 
     h2{
         font-size: map-get($headings, h3);
         font-weight: 500;
-        padding-top: 120px;
+        color: #000;
 
         i{
-            color: rgb(255, 255, 255);
+            color: rgb(0, 0, 0);
             font-size: map-get($headings, h5 );
         }
     }
@@ -448,39 +440,77 @@ footer{
 
 
 
-
-
-
-
 /*------NOSOTROS-------*/
 
+
+
+
 .us-box{
-    @include conts;
+    width: 100%;
+    height: 100vh;
+    background-color: #f3f3f3;
+    display: flex;
+    flex-direction: row;
     margin: auto;
-    padding: auto;
+}
+
+.us-img{ 
+    background-image: url(../assets/ph-us.jpg);
+    background-size: cover;
+    min-height: 80vh;
+    width: 100%;
+}
+
+.us-cont{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     text-align: center;
-    margin-top: 100px;
 }
+
+
+.bienvenidos{
+    color: darkgrey;
+    text-transform: capitalize;
+    width: 100%;
+    font-size: map-get($headings, h5); 
+    margin-top: 70px;
+}
+
+
 .nosotros-title{
-    margin-top: 40px;
-    color: white;
+    color: rgb(0, 0, 0);
     font-size: map-get($headings, h2);
+    font-weight: 600;
+    text-transform: uppercase;
 }
+
+
 .nosotros-texto{
     margin:50px;
-    color: white;
+    color: rgb(0, 0, 0);
 }
 
-.txt-map{
-    color: rgb(189, 189, 189);
+.map-box {
+    padding: auto;
 }
 
-.iframe-small{
-    display:none;
+
+iframe{
+    width: 500px;
 }
+
+
+
+
 
 
 /*----------------CONTACTO----------------*/
+
+
+
+
+
 
 #contacto-cont{
     margin-top:120px ;
@@ -627,11 +657,9 @@ textarea{
         font-size: 80px;
     }
     
-    .cont-home button{
-        width: 350px;
+    .boton{
+        padding-bottom: 100px;
     }
-
-
 
 
     #homeServCont{
@@ -702,8 +730,20 @@ textarea{
         color: rgb(156, 155, 155);
         font-size: map-get($headings, h3 );
     }
-   
-   
+
+
+
+    //------NOSOTROS-----//
+
+    .us-box{
+        display: flex;
+        flex-direction: column;
+        min-height: 180vh;
+    }
+
+    iframe{
+        width: 500px;
+    }
     
 }
 
@@ -726,21 +766,24 @@ textarea{
     .cont-home{
         margin-top: 100px;
         text-align: center;
+        align-items: center;
     }
     
     .cont-home h1{
         font-size: 60px;
     }
 
-    .cont-home button{
-        width: 350px;
-        height: 80px;
-        text-align: center;
+    .boton{
+        margin-bottom: 200px ;
+        button{
+            font-size: map-get($headings , h5);
+            
+        }
     }
 
 
     #homeServCont{
-        height: 160vh;
+        height: 315vh;
     }
 
     #homeServCont .items{
@@ -806,6 +849,22 @@ textarea{
         font-size: map-get($headings, h4 );
     }
 
+
+
+    //-------NOSOTROS-------//
+
+
+    .us-box{
+        display: flex;
+        flex-direction: column;
+        min-height: 180vh;
+    }
+
+    iframe{
+        width: 400px;
+    }
+
+
     /*-------CONTACTO------*/
 
     .formulario{
@@ -838,11 +897,40 @@ textarea{
     .cont-home{
         margin-top: 100px;
         text-align: center;
+        align-items: center;
+        h1{
+            font-size: map-get($headings , h2 ); 
+        }
+        
+    }
+    .boton {
+        padding-bottom: 150px;
+        button{
+            font-size:.75em;
+        }
+    }
+    
+     
+
+  h1{
+        font-size: map-get($headings , h2 );
+        
     }
 
-    .cont-home h1{
-        font-size: 40px;
-        text-align: center;
+    #homeServCont{
+        height: 250vh;
+    }
+
+    #homeServCont .items{
+        display: flex;
+        flex-direction: column;
+    }
+
+
+    .item1 , .item2 ,
+    .item3 , .item4 {
+        margin:auto;
+        padding-top:35px;
     }
 
 
@@ -878,23 +966,7 @@ textarea{
         font-weight: 500;
     }
 
-    #homeServCont{
-        height: 250vh;
-    }
-
-    #homeServCont .items{
-        display: flex;
-        flex-direction: column;
-    }
-
-
-    .item1 , .item2 ,
-    .item3 , .item4 {
-        margin:auto;
-        padding-top:35px;
-    }
-
-
+   
 
      // Servicios
 
@@ -921,18 +993,16 @@ textarea{
 
     /*------NOSOTROS------*/
 
-    iframe{
-        display: none;
+    .us-box{
+        display: flex;
+        flex-direction: column;
+        min-height: 180vh;
     }
 
-    .map-cont{
-        width: 100%;
-        display: flex;
-        justify-content: center;
+    iframe{
+        width: 320px;
     }
-    .iframe-small{
-        display: inline-block;
-    }
+
 
 
     /*--------CONTACTO--------*/

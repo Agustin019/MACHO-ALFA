@@ -482,7 +482,7 @@ iframe {
 
 #contacto-cont {
   width: 100%;
-  height: 110vh;
+  height: 120vh;
   background-color: #f3f3f3;
   padding-top: 100px;
 }
@@ -562,7 +562,6 @@ textarea {
   height: 100vh;
   width: 100%;
   place-items: center;
-  padding-top: 100px;
   background-color: #f3f3f3;
 }
 ::selection {
@@ -1082,12 +1081,19 @@ form .btn input[type="submit"] {
   }
 
   /*--------CONTACTO--------*/
+  #contacto-cont{
+     height: 130vh;
+  }
   .formulario {
     width: 90%;
   }
 
   /*-----REGISTRO----*/
-.wrapper{
+    .login-reg{
+        height: 130vh;
+        padding-bottom: 100px;
+    }
+    .wrapper{
     width: 330px;
 }
 }

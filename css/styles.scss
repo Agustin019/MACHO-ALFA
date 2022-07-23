@@ -573,6 +573,7 @@ textarea {
   max-width: 390px;
   background: #fff;
   padding: 30px;
+  margin-top: 50px;
   border-radius: 5px;
   box-shadow: 0px 15px 20px rgba(0, 0, 0, 0.1);
 }
@@ -1048,7 +1049,7 @@ form .btn input[type="submit"] {
 
   #carouselExampleControls {
     display: block;
-    margin: 35px 50px 50px 50px;
+    margin: 5px 50px 50px 50px;
     background-color: rgba(0, 0, 0, 0.4);
   }
 
@@ -1064,9 +1065,7 @@ form .btn input[type="submit"] {
     color: rgb(156, 155, 155);
     font-size: map-get($headings, h4);
   }
-  .servicio-title {
-    padding-top: 90px;
-  }
+  
 
   /*------NOSOTROS------*/
 

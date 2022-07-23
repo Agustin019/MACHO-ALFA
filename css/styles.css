@@ -659,6 +659,7 @@ textarea {
   max-width: 390px;
   background: #fff;
   padding: 30px;
+  margin-top: 50px;
   border-radius: 5px;
   -webkit-box-shadow: 0px 15px 20px rgba(0, 0, 0, 0.1);
           box-shadow: 0px 15px 20px rgba(0, 0, 0, 0.1);
@@ -1177,7 +1178,7 @@ form .btn input[type="submit"] {
   }
   #carouselExampleControls {
     display: block;
-    margin: 35px 50px 50px 50px;
+    margin: 5px 50px 50px 50px;
     background-color: rgba(0, 0, 0, 0.4);
   }
   .carousel-item {
@@ -1190,9 +1191,6 @@ form .btn input[type="submit"] {
   .card-txt-resp {
     color: #9c9b9b;
     font-size: 1.5em;
-  }
-  .servicio-title {
-    padding-top: 90px;
   }
   /*------NOSOTROS------*/
   .us-box {
